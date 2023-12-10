@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalkValley</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}" >
+    <link rel="icon" th:href="@{/img/home-box.ico}" type="image/x-icon">
+    <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js}"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="headericon">
+                <div class="header-item" ><img th:src="@{/img/home-box.png}" style="height: 45px;width: 45px;"></div>
+                <div class="titletext"><img th:src="@{/img/title.png}" style="height: 60px;width: 105px;"> </div>
+            </div>
+            <div class="logincard">
+                <div>
+                    <div style="display:flex;justify-content:center;align-items: center;text-align: center;">
+                        <p style="font-size:28px;color:rgb(56, 56, 56);font-weight: 500;letter-spacing: 1px;padding-top:12%;margin:0">欢迎来到云言谷</p>
+                        <img th:src="@{/img/party.png}" style="width:36px;height:36px;padding-top:12%;margin-left:5px">
+                    </div>            
+                    <p style="font-size:14px;color:rgb(104, 104, 104);font-weight:lighter;letter-spacing: 0.5px;padding:0;margin-top:5px">聊天&nbsp分享&nbsp发现无限可能</p>
+                </div>
+                <input class="enterphone" id="name1" placeholder="请输入昵称">
+                <input class="enterpassword" id="password1" placeholder="请输入密码">
+                <div class="hint">
+                    <span style="font-size:12px;color:rgb(113, 113, 113);padding:0">登录即同意《隐私条款与协议》</span>
+                    <button class="forgetpasswordbutton">忘记密码</button>
+                </div>
+                <button class="loginconfirm" onclick="tryLogin()">登录</button>
+            </div>
+            <div class="registercard">
+                <div>
+                    <div style="display:flex;justify-content:center;align-items: center;text-align: center;">
+                        <p style="font-size:28px;color:rgb(56, 56, 56);font-weight: 500;letter-spacing: 1px;padding-top:12%;margin:0">欢迎来到云言谷</p>
+                        <img th:src="@{/img/party.png}" style="width:36px;height:36px;padding-top:12%;margin-left:5px">
+                    </div>
+                    <p style="font-size:14px;color:rgb(104, 104, 104);font-weight:lighter;letter-spacing: 0.5px;padding:0;margin-top:5px">聊天&nbsp分享&nbsp发现无限可能</p>
+                </div>
+                <input class="enterphone" id="name2" placeholder="请输入昵称">
+                <input class="enterphone" id="phone2" placeholder="请输入手机号">
+                <input class="enterpassword" id="password2" placeholder="请输入密码">
+                <input class="enterpassword" id="password3" placeholder="请再次输入密码">
+                <div class="hint">
+                    <span style="font-size:12px;color:rgb(113, 113, 113);padding:0">注册即同意《隐私条款与协议》</span>
+<!--                    <button class="forgetpasswordbutton">忘记密码</button>-->
+                </div>
+                <button class="registerconfirm" onclick="tryRegister()">注册</button>
+            </div>
+            <div class="introduction">
+                <p class="introtext" >在<span class="introtext" style="color:rgb(118, 51, 180)">云言谷</span></p>
+                <p class="introtext" >每个故事都有声音</p>
+                <span style="font-size: 20px;font-weight:lighter;margin-top: 10px;">与世界分享你的声音，一起创造美好的回忆<br>在这里,每句话都值得被聆听</span>
+                <div style="display: flex;margin-top:50px">
+                    <button class="loginbutton">登录</button>
+                    <button class="registerbutton" >注册</button>
+                </div>
+            </div>      
+        </div>
+        <div class="right">
+            <img th:src="@{/img/bg2.png}" class="bg">
+        </div>
+        
+    </div>
+
+
+
+    <script th:src="@{/js/login.js}"></script>
+
+</body>
+</html>

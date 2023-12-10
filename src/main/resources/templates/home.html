@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalkValley</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+    <link rel="icon" th:href="@{/img/home-box.ico}" type="image/x-icon">
+    <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js}"></script>
+</head>
+<body>
+    <div class="leftpart">
+        <div class="sidebar">
+            <div class="header-all">
+                <div class="header-item" style="margin-top:1vh;margin-left:5vw"><img th:src="@{/img/chat-box.png}" style="height: 30px;width: 30px;"></div>
+                <div class="titletext"><img th:src="@{/img/title.png}" style="height: 40px;width: 70px;"> </div>
+            </div>
+            <div class="message-item" style="margin-top:3vh"><a href="#"><img id="messageicon" class="menuicon2" th:src="@{/img/message32.png}"></a></div>
+            <div class="contact-item"><a href="#"><img id="friendicon" class="menuicon" th:src="@{/img/friends1.png}"></a></div>
+            <div class="setting-item"><a href="#"><img class="menuicon" th:src="@{/img/setting1.png}"></a></div>
+            <div class="avatar-item"><a href="#"><img class="avatar avatarsidebar" th:src="@{/img/avatar.jpg}"></a></div>
+        </div>
+        <div class="cardlist">
+            <div class="messagelist">
+                <div class="cardheader">
+                    <span class="cardtitle">消息列表</span>
+                    <div class="statuscircle" style="background-color: rgb(207, 74, 74);margin-left:15px;display: inline-block;
+                    vertical-align: bottom; "></div>
+                    <span class="statustext" style="color:rgb(207, 74, 74) ;font-weight: 500;font-size: 14px;display: inline-block;
+                    vertical-align: bottom;">22</span>
+                </div>
+                <div class="messageitem" style="background-color: rgba(229, 229, 229, 0.489);">
+                    <div class="messageavatar">
+                        <img th:src="@{/img/avatar.jpg}" class="avatar">
+                    </div>
+                    <div class="messagetext" >
+                        <div class="tipname" >小羊</div>
+                        <div class="recent-message">猪得很!!!</div>
+                    </div>
+                    <div class="recent-time">
+                        <div class="unread-message">
+                            <span class="unread-number">1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="messageitem">
+                    <div class="messageavatar">
+                        <img th:src="@{/img/avatar5.jpg}" class="avatar">
+                    </div>
+                    <div class="messagetext">
+                        <div class="tipname" >李欣gogoju</div>
+                        <div class="recent-message">哈哈哈哈哈哈哈哈哈</div>
+                    </div>
+                    <div class="recent-time">10:27</div>
+                </div>
+                <div class="messageitem">
+                    <div class="messageavatar">
+                        <img th:src="@{/img/avatar6.jpg}" class="avatar">
+                    </div>
+                    <div class="messagetext" >
+                        <div class="tipname" >室内环境构图</div>
+                        <div class="recent-message">[图片]</div>
+                    </div>
+                    <div class="recent-time">9:13</div>
+                </div>
+            </div> 
+            <div class="contactlist">
+                <div class="cardheader">
+                    <span class="cardtitle">联系人</span>
+                    <button class="contactbutton1" style="color:rgb(129, 67, 186);font-weight: 500;">好友</button>
+                    <button class="contactbutton2">群聊</button>
+                    <button class="addfriend"><img class="addfriendimg" style="width:20px;height:20px" th:src="@{/img/add.png}" ></button>
+                </div>
+                <div class="frienditem">
+                    <div class="friendavatar">
+                        <img th:src="@{/img/avatar3.jpg}" class="avatar">
+                    </div>
+                    <div class="friendtext">
+                        <div class="tipname" >跑山小香猪</div>
+                        <div class="friendstatus">
+                          <div class="statuscircle" style="margin-left: 0;"></div>
+                          <span class="statustext">在线</span>
+                        </div>  
+                    </div>
+                    <div class="recent-time">
+                    </div>
+                </div>
+                <div class="frienditem">
+                    <div class="friendavatar">
+                        <img th:src="@{/img/avatar4.jpg}" class="avatar">
+                    </div>
+                    <div class="friendtext">
+                        <div class="tipname" >姐</div>
+                        <div class="friendstatus">
+                          <div class="statuscircle" style="margin-left: 0;"></div>
+                          <span class="statustext">在线</span>
+                        </div>  
+                    </div>
+                    <div class="recent-time">
+                    </div>
+                </div>
+                <div class="frienditem">
+                    <div class="friendavatar">
+                        <img th:src="@{/img/avatar.jpg}" class="avatar">
+                    </div>
+                    <div class="friendtext">
+                        <div class="tipname" >小羊</div>
+                        <div class="friendstatus">
+                          <div class="statuscircle" style="margin-left: 0;"></div>
+                          <span class="statustext">在线</span>
+                        </div>  
+                    </div>
+                    <div class="recent-time">
+                    </div>
+                </div>
+                <div class="groupitem">
+                    <div class="groupavatar">
+                        <img th:src="@{/img/avatar.jpg}" class="avatar">
+                    </div>
+                    <div class="grouptext">
+                        <div class="groupname" >21软人</div>
+                        <div class="groupmemnum">219人</div>
+                    </div>
+                </div>
+                <div class="groupitem">
+                    <div class="groupavatar">
+                        <img th:src="@{/img/avatar3.jpg}" class="avatar">
+                    </div>
+                    <div class="grouptext">
+                        <div class="groupname" >微服务组队</div>
+                        <div class="groupmemnum">5人</div>
+                    </div>
+                </div>
+                <div class="groupitem">
+                    <div class="groupavatar">
+                        <img th:src="@{/img/avatar2.jpg}" class="avatar">
+                    </div>
+                    <div class="grouptext">
+                        <div class="groupname" >我们三</div>
+                        <div class="groupmemnum">3人</div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </div>
+    <div class="content">
+       <div class="chatbar">
+        <img class="avatar" style="height:40px;width:40px;margin-left: 10px;" th:src="@{/img/avatar.jpg}">
+        <span style="margin-left: 20px;font-size: 15px;color: rgb(80, 80, 80);">小羊</span> 
+        <div class="statuscircle"></div>
+        <span class="statustext">在线</span>
+        <img th:src="@{/img/video.png}" style="width: 28px;height:28px;margin-left:70%">
+       </div>
+
+       <div class="chatcontent">
+        <div class="leftone">
+            <img class="avatar" th:src="@{/img/avatar.jpg}" style="margin-left: 10px;">
+            <div class="chatdiv">
+                <div class="chatwordsleft">你好你好你好!</div>
+                <span class="timetextleft">10:24</span>
+            </div>
+
+        </div>
+        <div class="rightone">       
+            <div class="chatdiv"> 
+                <span class="timetextright">10:24</span>
+                <div class="chatwordsright">你好你好你好!</div>   
+            </div>
+            <img class="avatar" th:src="@{/img/avatar2.jpg}" style="margin-right: 10px;">
+
+        </div>
+        <div class="datetext">2023年11月5日</div>
+        <div class="leftone">
+            <img class="avatar" th:src="@{/img/avatar.jpg}" style="margin-left: 10px;">
+            <div class="chatdiv">
+                <div class="chatwordsleft">猪得很你!</div>
+                <span class="timetextleft">10:26</span>
+            </div>
+
+        </div>
+        <div class="rightone">       
+            <div class="chatdiv"> 
+                <span class="timetextright">10:27</span>
+                <div class="chatwordsright">猪得很你!</div>   
+            </div>
+            <img class="avatar" th:src="@{/img/avatar2.jpg}" style="margin-right: 10px;">
+
+        </div>
+       </div>
+
+       <div class="inputdiv">
+            <textarea class="inputbar" type="text" placeholder="在这里输入消息..." ></textarea>
+            <div class="functions">      
+                <img th:src="@{/img/smile.png}" style="width:22px;height:22px;">
+                <img th:src="@{/img/picture.png}" style="width:22px;height:22px;margin-left: -80%;">
+                <button class="sendbutton">
+                    <img th:src="@{/img/send.png}" style="width:16px;height:16px">
+                    <span style="margin-left:3px">发送</span>
+                </button>
+            </div>
+       </div>
+    </div>
+    <div class="profile">
+        <button class="closeprofile" >
+            <img  class="closeprofile" th:src="@{/img/close.png}">
+        </button>
+        <img class="profileavatar" th:src="@{/img/avatar.jpg}" style="border-radius: 50%;width:90px;width:90px;margin-top:3vh;z-index:2;position: relative;">
+        <p  class="profiletip" style="font-size:20px;font-weight: bold;margin-top:5px">小羊</p>
+        <p  class="profilename" style="font-size:14px;font-weight: lighter;margin-top:-20px;color:rgb(88, 88, 88)">little sheeeeep</p>
+        <div class="cardinfo">
+            <div class="info">
+                <div class="infoitem" style="margin-top:20px">
+                    <img th:src="@{/img/name2.png}" class="itemimg1">
+                    <span class="itemtitle">昵称</span>
+                    <span class="itemtext">Little Sheeeeep</span>
+                </div>
+                <div class="infoitem">
+                    <img th:src="@{/img/alias.png}" class="itemimg1">
+                    <span class="itemtitle">备注</span>
+                    <span class="itemtext">小羊</span>
+                    <img th:src="@{/img/edittip.png}" class="itemimg1" style="margin-left:50%;">
+                </div>
+                <div class="infoitem">
+                    <img th:src="@{/img/手机号码.png}" class="itemimg1">
+                    <span class="itemtitle">电话</span>
+                    <span class="itemtext">18981729781</span>
+                </div>
+                <div class="infoitem">
+                    <img th:src="@{/img/location.png}" class="itemimg1">
+                    <span class="itemtitle">地区</span>
+                    <span class="itemtext">上海市嘉定区</span>
+                </div>
+                <div class="infoitem2">
+                    <img th:src="@{/img/写字.png}" class="itemimg1">
+                    <span class="itemtitle">签名</span>
+                    <span class="itemtext2">别看我只是一只羊~羊儿的聪明难以想象~</span>
+                </div>
+                <button class="deletebutton">删除好友</button>
+            </div>
+        </div>
+    </div>
+    <script th:src="@{/js/leftpart.js}"></script>
+    <script th:src="@{/js/profile.js}"></script>
+    <script th:src="@{/js/home.js}"></script>
+</body>
+</html>

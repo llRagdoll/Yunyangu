@@ -1,0 +1,147 @@
+.container{
+    height:100vh;
+    width:100vw;
+    padding:0;
+    margin:0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:linear-gradient(to bottom right, #dffaf5,#f7e0f6);
+}
+
+body{
+    overflow: hidden;
+    padding:0;
+    margin:0
+}
+
+.headericon{
+    display:flex;
+    position: absolute;
+    top: 2vh;
+    left: 10px;
+    justify-content: left;
+    text-align: left;
+}
+
+.header-item,.titletext{
+    /*align-items: left;*/
+    justify-content: left;
+    text-align: left;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.bg{
+    width:55vw;
+    height:100vh;
+    margin-left:5vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.logincard , .registercard{
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(96, 96, 96, 0.34);
+    width:28vw;
+
+    margin-left:10vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.logincard{
+    height:50vh;
+}
+
+.registercard{
+    height:65vh;
+}
+
+.introduction{
+    margin-left:10vw;
+    text-align: left;
+    width:28vw;
+}
+
+.introtext{
+    font-size: 50px;
+    font-weight:bolder;
+    color:rgb(72, 72, 72)
+}
+
+.loginbutton{
+    padding:10px 30px 10px 30px;
+    background-color: #5b48d6;
+    color:white;
+    border:none;
+    border-radius: 10px;
+    font-size:18px
+}
+
+.registerbutton{
+    margin-left:60px;
+    padding:10px 30px 10px 30px;
+    background-color: #fdfdfd;
+    color:black;
+    border:1px solid rgb(172, 172, 172);
+    border-radius: 10px;
+    font-size:18px
+}
+
+
+.logincard ,.registercard{
+    display: none; /* 默认隐藏 */
+  }
+
+
+  .enterphone,.enterpassword{
+    color:rgb(91, 88, 88);
+    width:70%;
+    height:24px; 
+    border-radius: 10px;
+    border: 0.5px solid rgb(164, 164, 164);
+    padding:8px;
+    margin-top:20px
+  }
+
+  .enterphone:focus,.enterpassword:focus{
+    border:0.5px solid rgb(210, 210, 210) ;
+    box-shadow: 0 0 5px rgb(205, 205, 205);
+    outline:none
+}
+  
+  .hint{
+    width:70%;
+    display:flex;
+    justify-content: space-between;
+    margin-left:15%;
+    margin-top:20px
+  }
+
+  .forgetpasswordbutton{
+    border:none;
+    font-size:12px;
+    color:#5b48d6;
+    background-color: white;
+  }
+
+  .loginconfirm,.registerconfirm{
+    width:70%;
+    border:none;
+    font-size:16px;
+    color:white;
+    background-color: #5b48d6;
+    padding:10px;
+    margin-top:20px;
+    border-radius:10px
+  }
