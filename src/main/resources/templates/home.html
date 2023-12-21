@@ -15,185 +15,156 @@
                 <div class="header-item" style="margin-top:1vh;margin-left:5vw"><img th:src="@{/img/chat-box.png}" style="height: 30px;width: 30px;"></div>
                 <div class="titletext"><img th:src="@{/img/title.png}" style="height: 40px;width: 70px;"> </div>
             </div>
-            <div class="message-item" style="margin-top:3vh"><a href="#"><img id="messageicon" class="menuicon2" th:src="@{/img/message32.png}"></a></div>
-            <div class="contact-item"><a href="#"><img id="friendicon" class="menuicon" th:src="@{/img/friends1.png}"></a></div>
-            <div class="setting-item"><a href="#"><img class="menuicon" th:src="@{/img/setting1.png}"></a></div>
-            <div class="avatar-item"><a href="#"><img class="avatar avatarsidebar" th:src="@{/img/avatar.jpg}"></a></div>
+            <div class="message-item"  id="menuitem1" style="margin-top:3vh"><a href="#"><img id="messageicon" class="menuicon2" th:src="@{/img/friends1.png}"></a></div>
+            <div class="contact-item" id="menuitem2"><a href="#"><img id="friendicon" class="menuicon" th:src="@{/img/addcontact3.png}"></a></div>
+<!--            <div class="setting-item"><a href="#"><img class="menuicon" th:src="@{/img/setting1.png}"></a></div>-->
+<!--            <div class="logout-item"><a href="logout" class="avatar avatarsidebar" style="text-decoration: none;color:#404040;font-size: 15px" >退出</a></div>-->
+            <div class="avatar avatarsidebar"><img id="leftpartavatar" style="height:40px"></div>
         </div>
         <div class="cardlist">
-            <div class="messagelist">
-                <div class="cardheader">
-                    <span class="cardtitle">消息列表</span>
-                    <div class="statuscircle" style="background-color: rgb(207, 74, 74);margin-left:15px;display: inline-block;
-                    vertical-align: bottom; "></div>
-                    <span class="statustext" style="color:rgb(207, 74, 74) ;font-weight: 500;font-size: 14px;display: inline-block;
-                    vertical-align: bottom;">22</span>
-                </div>
-                <div class="messageitem" style="background-color: rgba(229, 229, 229, 0.489);">
-                    <div class="messageavatar">
-                        <img th:src="@{/img/avatar.jpg}" class="avatar">
-                    </div>
-                    <div class="messagetext" >
-                        <div class="tipname" >小羊</div>
-                        <div class="recent-message">猪得很!!!</div>
-                    </div>
-                    <div class="recent-time">
-                        <div class="unread-message">
-                            <span class="unread-number">1</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="messageitem">
-                    <div class="messageavatar">
-                        <img th:src="@{/img/avatar5.jpg}" class="avatar">
-                    </div>
-                    <div class="messagetext">
-                        <div class="tipname" >李欣gogoju</div>
-                        <div class="recent-message">哈哈哈哈哈哈哈哈哈</div>
-                    </div>
-                    <div class="recent-time">10:27</div>
-                </div>
-                <div class="messageitem">
-                    <div class="messageavatar">
-                        <img th:src="@{/img/avatar6.jpg}" class="avatar">
-                    </div>
-                    <div class="messagetext" >
-                        <div class="tipname" >室内环境构图</div>
-                        <div class="recent-message">[图片]</div>
-                    </div>
-                    <div class="recent-time">9:13</div>
-                </div>
-            </div> 
+<!--            <div class="messagelist">-->
+<!--                <div class="cardheader">-->
+<!--                    <span class="cardtitle">消息列表</span>-->
+<!--                    <div class="statuscircle" style="background-color: rgb(207, 74, 74);margin-left:15px;display: inline-block;-->
+<!--                    vertical-align: bottom; "></div>-->
+<!--                    <span class="statustext" style="color:rgb(207, 74, 74) ;font-weight: 500;font-size: 14px;display: inline-block;-->
+<!--                    vertical-align: bottom;">22</span>-->
+<!--                </div>-->
+<!--                <div class="messageitem" style="background-color: rgba(229, 229, 229, 0.489);">-->
+<!--                    <div class="messageavatar">-->
+<!--                        <img th:src="@{/img/avatar.jpg}" class="avatar">-->
+<!--                    </div>-->
+<!--                    <div class="messagetext" >-->
+<!--                        <div class="tipname" >小羊</div>-->
+<!--                        <div class="recent-message">猪得很!!!</div>-->
+<!--                    </div>-->
+<!--                    <div class="recent-time">-->
+<!--                        <div class="unread-message">-->
+<!--                            <span class="unread-number">1</span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="messageitem">-->
+<!--                    <div class="messageavatar">-->
+<!--                        <img th:src="@{/img/avatar5.jpg}" class="avatar">-->
+<!--                    </div>-->
+<!--                    <div class="messagetext">-->
+<!--                        <div class="tipname" >李欣gogoju</div>-->
+<!--                        <div class="recent-message">哈哈哈哈哈哈哈哈哈</div>-->
+<!--                    </div>-->
+<!--                    <div class="recent-time">10:27</div>-->
+<!--                </div>-->
+<!--                <div class="messageitem">-->
+<!--                    <div class="messageavatar">-->
+<!--                        <img th:src="@{/img/avatar6.jpg}" class="avatar">-->
+<!--                    </div>-->
+<!--                    <div class="messagetext" >-->
+<!--                        <div class="tipname" >室内环境构图</div>-->
+<!--                        <div class="recent-message">[图片]</div>-->
+<!--                    </div>-->
+<!--                    <div class="recent-time">9:13</div>-->
+<!--                </div>-->
+<!--            </div> -->
             <div class="contactlist">
                 <div class="cardheader">
                     <span class="cardtitle">联系人</span>
-                    <button class="contactbutton1" style="color:rgb(129, 67, 186);font-weight: 500;">好友</button>
-                    <button class="contactbutton2">群聊</button>
-                    <button class="addfriend"><img class="addfriendimg" style="width:20px;height:20px" th:src="@{/img/add.png}" ></button>
+                    <button class="contactbutton1" id="contactfriend" style="color:rgb(129, 67, 186);font-weight: 500;">好友</button>
+                    <button class="contactbutton2" id="contactgroup" style="font-weight: 500">群聊</button>
+<!--                    <button class="addfriend"><img class="addfriendimg" style="width:20px;height:20px" th:src="@{/img/add.png}" ></button>-->
                 </div>
-                <div class="frienditem">
-                    <div class="friendavatar">
-                        <img th:src="@{/img/avatar3.jpg}" class="avatar">
+                <div id="friendsContainerBig">
+                    <div id="friendsinfo">
+                        <p style="color:#999999;font-size: 16px;padding:10px;margin-top:5px;margin-bottom:5px;margin-left:10px">在线好友</p>
+                        <div id="users" style="margin-left:20px"></div>
+                        <p style="color:#999999;font-size: 16px;padding:10px;margin-top:5px;margin-bottom:5px;margin-left:10px">全部好友</p>
                     </div>
-                    <div class="friendtext">
-                        <div class="tipname" >跑山小香猪</div>
-                        <div class="friendstatus">
-                          <div class="statuscircle" style="margin-left: 0;"></div>
-                          <span class="statustext">在线</span>
-                        </div>  
-                    </div>
-                    <div class="recent-time">
+                    <div id="friendsContainer">
+
                     </div>
                 </div>
-                <div class="frienditem">
-                    <div class="friendavatar">
-                        <img th:src="@{/img/avatar4.jpg}" class="avatar">
+
+                <div id="groupsContainer">
+
+                </div>
+            </div>
+            <div class="addcontactlist">
+                <div class="cardheader2">
+                    <span class="cardtitle">添加联系人</span>
+                </div>
+                <div style="display:flex;flex-direction:column;align-content:center;width:100%;text-align: center">
+                    <div style="flex-direction:column;align-content:center;justify-content: center;text-align: center">
+                        <input class="enterphone" placeholder="请输入要添加的好友名称" id="addfriendid">
+                        <div style="display: flex;margin-top:15px;align-content: center;text-align: center;justify-content: center">
+                            <button class="addfriendbutton" id="addfriendbutton">添加好友</button>
+
+                        </div>
                     </div>
-                    <div class="friendtext">
-                        <div class="tipname" >姐</div>
-                        <div class="friendstatus">
-                          <div class="statuscircle" style="margin-left: 0;"></div>
-                          <span class="statustext">在线</span>
-                        </div>  
+                    <div>
+                        <input class="enterphone" placeholder="请输入要进入的群聊名称" id="addgroupid">
+                        <div style="display: flex;margin-top:15px;align-content: center;text-align: center;justify-content: center">
+                            <button class="addgroupbutton" id="addgroupbutton">进入群聊</button>
+                        </div>
                     </div>
-                    <div class="recent-time">
+                    <div>
+                        <input class="enterphone" placeholder="请输入要创建的群聊名称" id="creategroupname">
+                        <div style="display: flex;margin-top:15px;align-content: center;text-align: center;justify-content: center">
+                            <button class="creategroupbutton" id="creategroupbutton">创建群聊</button>
+                        </div>
                     </div>
                 </div>
-                <div class="frienditem">
-                    <div class="friendavatar">
-                        <img th:src="@{/img/avatar.jpg}" class="avatar">
-                    </div>
-                    <div class="friendtext">
-                        <div class="tipname" >小羊</div>
-                        <div class="friendstatus">
-                          <div class="statuscircle" style="margin-left: 0;"></div>
-                          <span class="statustext">在线</span>
-                        </div>  
-                    </div>
-                    <div class="recent-time">
-                    </div>
-                </div>
-                <div class="groupitem">
-                    <div class="groupavatar">
-                        <img th:src="@{/img/avatar.jpg}" class="avatar">
-                    </div>
-                    <div class="grouptext">
-                        <div class="groupname" >21软人</div>
-                        <div class="groupmemnum">219人</div>
-                    </div>
-                </div>
-                <div class="groupitem">
-                    <div class="groupavatar">
-                        <img th:src="@{/img/avatar3.jpg}" class="avatar">
-                    </div>
-                    <div class="grouptext">
-                        <div class="groupname" >微服务组队</div>
-                        <div class="groupmemnum">5人</div>
-                    </div>
-                </div>
-                <div class="groupitem">
-                    <div class="groupavatar">
-                        <img th:src="@{/img/avatar2.jpg}" class="avatar">
-                    </div>
-                    <div class="grouptext">
-                        <div class="groupname" >我们三</div>
-                        <div class="groupmemnum">3人</div>
-                    </div>
-                </div>
+
+
             </div>
         </div>   
     </div>
     <div class="content">
        <div class="chatbar">
-        <img class="avatar" style="height:40px;width:40px;margin-left: 10px;" th:src="@{/img/avatar.jpg}">
-        <span style="margin-left: 20px;font-size: 15px;color: rgb(80, 80, 80);">小羊</span> 
-        <div class="statuscircle"></div>
-        <span class="statustext">在线</span>
-        <img th:src="@{/img/video.png}" style="width: 28px;height:28px;margin-left:70%">
+        <span id="talktitle" style="margin-left: 20px;font-size: 15px;color: rgb(80, 80, 80);font-weight:600">选择一个聊天对象</span>
        </div>
 
        <div class="chatcontent">
-        <div class="leftone">
-            <img class="avatar" th:src="@{/img/avatar.jpg}" style="margin-left: 10px;">
-            <div class="chatdiv">
-                <div class="chatwordsleft">你好你好你好!</div>
-                <span class="timetextleft">10:24</span>
-            </div>
+           <div id="log-container" style="height:500px;overflow-y:scroll"></div>
+<!--        <div class="leftone">-->
+<!--            <img class="avatar" th:src="@{/img/avatar.jpg}" style="margin-left: 10px;">-->
+<!--            <div class="chatdiv">-->
+<!--                <div class="chatwordsleft">你好你好你好!</div>-->
+<!--                <span class="timetextleft">10:24</span>-->
+<!--            </div>-->
 
-        </div>
-        <div class="rightone">       
-            <div class="chatdiv"> 
-                <span class="timetextright">10:24</span>
-                <div class="chatwordsright">你好你好你好!</div>   
-            </div>
-            <img class="avatar" th:src="@{/img/avatar2.jpg}" style="margin-right: 10px;">
+<!--        </div>-->
+<!--        <div class="rightone">       -->
+<!--            <div class="chatdiv"> -->
+<!--                <span class="timetextright">10:24</span>-->
+<!--                <div class="chatwordsright">你好你好你好!</div>   -->
+<!--            </div>-->
+<!--            <img class="avatar" th:src="@{/img/avatar2.jpg}" style="margin-right: 10px;">-->
 
-        </div>
-        <div class="datetext">2023年11月5日</div>
-        <div class="leftone">
-            <img class="avatar" th:src="@{/img/avatar.jpg}" style="margin-left: 10px;">
-            <div class="chatdiv">
-                <div class="chatwordsleft">猪得很你!</div>
-                <span class="timetextleft">10:26</span>
-            </div>
+<!--        </div>-->
+<!--        <div class="datetext">2023年11月5日</div>-->
+<!--        <div class="leftone">-->
+<!--            <img class="avatar" th:src="@{/img/avatar.jpg}" style="margin-left: 10px;">-->
+<!--            <div class="chatdiv">-->
+<!--                <div class="chatwordsleft">猪得很你!</div>-->
+<!--                <span class="timetextleft">10:26</span>-->
+<!--            </div>-->
 
-        </div>
-        <div class="rightone">       
-            <div class="chatdiv"> 
-                <span class="timetextright">10:27</span>
-                <div class="chatwordsright">猪得很你!</div>   
-            </div>
-            <img class="avatar" th:src="@{/img/avatar2.jpg}" style="margin-right: 10px;">
+<!--        </div>-->
+<!--        <div class="rightone">       -->
+<!--            <div class="chatdiv"> -->
+<!--                <span class="timetextright">10:27</span>-->
+<!--                <div class="chatwordsright">猪得很你!</div>   -->
+<!--            </div>-->
+<!--            <img class="avatar" th:src="@{/img/avatar2.jpg}" style="margin-right: 10px;">-->
 
-        </div>
+<!--        </div>-->
        </div>
 
        <div class="inputdiv">
-            <textarea class="inputbar" type="text" placeholder="在这里输入消息..." ></textarea>
+            <textarea class="inputbar" id="myinfo" type="text" placeholder="在这里输入消息..." ></textarea>
             <div class="functions">      
                 <img th:src="@{/img/smile.png}" style="width:22px;height:22px;">
                 <img th:src="@{/img/picture.png}" style="width:22px;height:22px;margin-left: -80%;">
-                <button class="sendbutton">
+                <button id="send" class="sendbutton">
                     <img th:src="@{/img/send.png}" style="width:16px;height:16px">
                     <span style="margin-left:3px">发送</span>
                 </button>
@@ -201,46 +172,314 @@
        </div>
     </div>
     <div class="profile">
-        <button class="closeprofile" >
-            <img  class="closeprofile" th:src="@{/img/close.png}">
-        </button>
-        <img class="profileavatar" th:src="@{/img/avatar.jpg}" style="border-radius: 50%;width:90px;width:90px;margin-top:3vh;z-index:2;position: relative;">
-        <p  class="profiletip" style="font-size:20px;font-weight: bold;margin-top:5px">小羊</p>
-        <p  class="profilename" style="font-size:14px;font-weight: lighter;margin-top:-20px;color:rgb(88, 88, 88)">little sheeeeep</p>
+        <img class="profileavatar" id="profileAvatar" th:src="@{/img/avatar.jpg}" style="border-radius: 50%;width:90px;margin-top:3vh;z-index:2;position: relative;">
+        <p  class="profiletip" id="profileheadername" style="font-size:20px;font-weight: bold;margin-top:5px">Little Sheeeeep</p>
         <div class="cardinfo">
-            <div class="info">
+            <div class="info" id="showinfomation">
                 <div class="infoitem" style="margin-top:20px">
+                    <img th:src="@{/img/key.png}" class="itemimg1">
+                    <span class="itemtitle">ID</span>
+                    <span class="itemtext" id="info_id">1</span>
+                </div>
+                <div class="infoitem">
                     <img th:src="@{/img/name2.png}" class="itemimg1">
                     <span class="itemtitle">昵称</span>
-                    <span class="itemtext">Little Sheeeeep</span>
+                    <span class="itemtext" id="info_name">Little Sheeeeep</span>
                 </div>
                 <div class="infoitem">
                     <img th:src="@{/img/alias.png}" class="itemimg1">
-                    <span class="itemtitle">备注</span>
-                    <span class="itemtext">小羊</span>
-                    <img th:src="@{/img/edittip.png}" class="itemimg1" style="margin-left:50%;">
+                    <span class="itemtitle">邮箱</span>
+                    <span class="itemtext" id="info_email">1040687614@qq.com</span>
                 </div>
                 <div class="infoitem">
                     <img th:src="@{/img/手机号码.png}" class="itemimg1">
                     <span class="itemtitle">电话</span>
-                    <span class="itemtext">18981729781</span>
+                    <span class="itemtext" id="info_phone">18981729781</span>
                 </div>
                 <div class="infoitem">
                     <img th:src="@{/img/location.png}" class="itemimg1">
                     <span class="itemtitle">地区</span>
-                    <span class="itemtext">上海市嘉定区</span>
+                    <span class="itemtext" id="info_address">上海市嘉定区</span>
                 </div>
                 <div class="infoitem2">
                     <img th:src="@{/img/写字.png}" class="itemimg1">
                     <span class="itemtitle">签名</span>
-                    <span class="itemtext2">别看我只是一只羊~羊儿的聪明难以想象~</span>
+                    <span class="itemtext2" id="info_signature">别看我只是一只羊~羊儿的聪明难以想象~</span>
                 </div>
-                <button class="deletebutton">删除好友</button>
+                <button class="deletebutton" id="editinfobutton">编辑信息</button>
+                <button class="deletebutton" id="deletefriendbutton">删除好友</button>
+            </div>
+            <div class="info" id="editinfo">
+                <input class="enterphone" id="name3" placeholder="请输入昵称">
+                <input class="enterphone" id="phone3" placeholder="请输入手机号">
+                <input class="enterphone" id="email3" placeholder="请输入邮箱">
+                <input class="enterphone" id="address3" placeholder="请输入地址">
+                <input class="enterphone" id="avatar3" placeholder="请输入头像url">
+                <input class="enterphone" id="signature3" placeholder="请输入签名">
+                <button class="savebutton">保存信息</button>
+            </div>
+            <div class="info" id="groupinfo">
+                <div class="infoitem" style="margin-top:20px">
+                    <img th:src="@{/img/key.png}" class="itemimg1">
+                    <span class="itemtitle">ID</span>
+                    <span class="itemtext" id="info_id_group">1</span>
+                </div>
+                <div class="infoitem">
+                    <img th:src="@{/img/name2.png}" class="itemimg1">
+                    <span class="itemtitle">名称</span>
+                    <span class="itemtext" id="info_name_group">Little Sheeeeep</span>
+                </div>
+                <div class="infoitem">
+                    <img th:src="@{/img/alias.png}" class="itemimg1">
+                    <span class="itemtitle">群主ID</span>
+                    <span class="itemtext" id="info_master_group">1</span>
+                </div>
+                <div class="infoitem">
+                    <img th:src="@{/img/写字.png}" class="itemimg1">
+                    <span class="itemtitle">建群时间</span>
+                    <span class="itemtext" id="info_time_group">Little Sheeeeep</span>
+                </div>
             </div>
         </div>
     </div>
-    <script th:src="@{/js/leftpart.js}"></script>
-    <script th:src="@{/js/profile.js}"></script>
-    <script th:src="@{/js/home.js}"></script>
+
+    <script th:src="@{/js/homeNew.js}"></script>
+
+
+    <script>
+        function scrollToBottom(){
+            let div = document.getElementById('log-container');
+            div.scrollTop = div.scrollHeight;
+        }
+
+        let chatType=1;
+
+
+        $(document).ready(function() {
+            // 指定websocket路径
+            let uid=window.sessionStorage.getItem("userID");
+            let  username=window.sessionStorage.getItem("userName");
+            console.log(uid);
+            console.log(username);
+            let websocket;
+            if ('WebSocket' in window) {
+                websocket = new WebSocket(`ws://localhost:8080/ws?uid=${uid}`);
+
+            }else {
+                websocket = new SockJS('http://localhost:8080/ws/sockjs'+'${uid}');
+            }
+            websocket.onmessage = function(event) {
+                let data=JSON.parse(event.data);
+                if(data.from>0||data.from===-1){//用户或者群消息
+                    // 接收服务端的实时消息并添加到HTML页面中
+                    // 获取时间戳并创建 Date 对象
+                    let timestamp = data.date;
+                    let date = new Date(timestamp);
+
+                    let formattedDate = `${date.getFullYear()}/${padZero(date.getMonth() + 1)}/${padZero(date.getDate())} ${padZero(date.getHours())}:${padZero(date.getMinutes())}:${padZero(date.getSeconds())}`;
+
+                    $("#log-container").append(`<div class='bg-info'><label class="messagetitle" style="font-size: 14px">${data.fromName}&nbsp;对我说&nbsp;${formattedDate}</label><div class="messagecontent" style="font-size: 15px">${data.text}</div></div><br>`);
+
+                    // 辅助函数，用于补零
+                    function padZero(num) {
+                        return num.toString().padStart(2, '0');
+                    }
+
+                    //$("#log-container").append("<div class='bg-info'><label class='text-danger'>"+data.fromName+"&nbsp;"+data.date+"</label><div class='text-success'>"+data.text+"</div></div><br>");
+                    // 滚动条滚动到最低部
+                    scrollToBottom();
+                }else if(data.from===0){//上线消息
+                    console.log("上线消息");
+                    console.log(data.text);
+                    if(data.text!==`${username}`)
+                    {
+                        //如果是好友就添加
+                        if(isFriend(data.text))
+                        {
+                            $("#users").append('<a href="#" onclick="talk(this,1)" style="margin-top:10px;margin-left:20px;text-decoration: none;color:#434343;font-size: 15px">'+data.text+'</a><br>');
+                            // alert(data.text+"上线了");
+                        }
+                    }
+                }else if(data.from===-2){//下线消息
+                    if(data.text!==`${username}`)
+                    {
+                        $("#users > a").remove(":contains('"+data.text+"')");
+                        // alert(data.text+"下线了");
+                    }
+                }
+            };
+            websocket.onclose = function(event) {
+                console.log("WebSocket连接已关闭。关闭代码：" + event.code + ", 原因：" + event.reason);
+                alert("你已经断开");
+                window.location.href="loginPage";
+            };
+
+            function isFriend(friendName){
+                let flag=false;
+                $.ajax({
+                    url:"http://localhost:8080/friend/isFriend",
+                    type:"GET",
+                    data:{
+                        userId:uid,
+                        friendName:friendName
+                    },
+                    dataType:'json',
+                    async:false,
+                    success:function(res){
+                        console.log("判断好友");
+                        console.log(res);
+                        flag=(res.code===0);
+                    },
+                    error:function(){
+                        alert( "判断好友失败！")
+                    }
+                })
+                return flag;
+            }
+
+            function padZero(num) {
+                return num.toString().padStart(2, '0');
+            }
+
+            $.ajax({
+                url:"http://localhost:8080/chat/onlinefriends",
+                type:"POST",
+                data:{
+                },
+                dataType:'json',
+                async:false,
+                success:function(res){
+                    $("#users").empty();
+
+                    // 循环处理返回的数据
+                    for (let i = 0; i < res.length; i++) {
+                        let friendName = res[i];
+                        $("#users").append('<a href="#" onclick="talk(this,1)" style="margin-top:10px;margin-left:20px;text-decoration: none;color:#434343;font-size: 15px">' + friendName + '</a><br>');
+                    }
+                },
+                error:function(){
+                    alert("获取在线好友失败！")
+                }
+            })
+
+            $("#send").click(function(){
+                console.log("发送消息");
+                if(!$("body").data("to")){
+                    alert("请选择接收者");
+                }else{
+                    if(chatType===1){
+                        let uid=window.sessionStorage.getItem("userID");
+                        let username=window.sessionStorage.getItem("userName");
+                        let receiver=getUid()
+
+                        let v=$("#myinfo").val();
+
+                        if(v===""){
+
+                        }else{
+                            let data={};
+                            data["from"]=uid;
+                            data["fromName"]=username;
+                            data["to"]=receiver;
+                            data["text"]=v;
+                            websocket.send(JSON.stringify(data));
+
+                            let date = new Date();
+
+                            let formattedDate = `${date.getFullYear()}/${padZero(date.getMonth() + 1)}/${padZero(date.getDate())} ${padZero(date.getHours())}:${padZero(date.getMinutes())}:${padZero(date.getSeconds())}`;
+                            $("#log-container").append(`<div class='bg-success'><label class='messagetitle2'>我对&nbsp;${$("body").data("to")}&nbsp;说&nbsp;${formattedDate}</label><div class='messagecontent'>${v}</div></div><br>`);
+
+                            scrollToBottom();
+                            $("#myinfo").val("");
+                            console.log(data);
+                        }
+                    }else if(chatType===2){//群聊
+                        $.ajax({
+                            url:"http://localhost:8080/chat/broadcastGroup",
+                            type:"POST",
+                            data:{
+                                fromName:username+"在群聊"+$("body").data("to")+"中",
+                                text:$("#myinfo").val(),
+                                groupName:$("body").data("to")
+                            },
+                            dataType:'json',
+                            async:false,
+                            success:function(res){
+                                console.log("发送群聊消息成功");
+                            },
+                            error:function(){
+                                alert("发送群消息失败！")
+                            }
+                        })
+                        $("#myinfo").val("");
+                    }
+                }
+            });
+
+        });
+
+        function talk(a,flag){
+            if(flag===1) {
+                $("#talktitle").text("与" + a.innerHTML + "聊天");
+                $("body").data("to", a.innerHTML);
+                chatType=1;
+            }else if(flag===2){
+                let username=window.sessionStorage.getItem("userName");
+                $("#talktitle").text("在群聊" + a.innerHTML + "聊天");
+                $("body").data("to",a.innerHTML);
+                chatType=2;
+            }
+        }
+
+        function getUid(){
+            let uid=0;
+            if(chatType===1){
+                $.ajax(
+                    {
+                        url:"http://localhost:8080/user/getUserByName",
+                        type:"GET",
+                        data:{
+                            name:$("body").data("to")
+                        },
+                        dataType:'json',
+                        async:false,
+                        success:function(res){
+                            console.log("获取uid");
+                            console.log(res);
+                            uid= res.data;
+                        },
+                        error:function(){
+                            alert("获取uid失败！")
+                        }
+                    }
+                )
+
+            }
+            else if(chatType===2){
+                $.ajax(
+                    {
+                        url:"http://localhost:8080/group/getGroupByName",
+                        type:"GET",
+                        data:{
+                            name:$("body").data("to")
+                        },
+                        dataType:'json',
+                        async:false,
+                        success:function(res){
+                            console.log("获取groupid");
+                            console.log(res);
+                            uid= res.data;
+                        },
+                        error:function(){
+                            alert("获取groupid失败！")
+                        }
+                    }
+                )
+            }
+
+            return uid;
+        }
+
+    </script>
 </body>
 </html>

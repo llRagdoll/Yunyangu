@@ -5,8 +5,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.yunyangu.yunyangu.entity.Friend;
 import org.yunyangu.yunyangu.entity.Result;
+import org.yunyangu.yunyangu.entity.User;
 import org.yunyangu.yunyangu.service.FriendService;
+import org.yunyangu.yunyangu.service.UserService;
 
 import java.util.List;
 
@@ -16,9 +19,13 @@ public class FriendController {
 
     @Autowired
     private FriendService friendService;
+
+    @Autowired
+    private UserService userService;
+
     @GetMapping("/getFriend")
     public Result getFriend(int userID){
-        List<Integer> temp=friendService.getFriend(userID);
+        List<User> temp=friendService.getFriend(userID);
         return Result.success(temp);
     }
 
@@ -30,9 +37,24 @@ public class FriendController {
     }
 
     @PostMapping("/deleteFriend")
-    public Result deleteFriend(int userID,int friendID){
+    public Result deleteFriend(Integer userID,Integer friendID){
         friendService.deleteFriend(userID,friendID);
         friendService.deleteFriend(friendID,userID);
         return Result.success();
+    }
+
+    @GetMapping("/isFriend")
+    public Result isFriend(Integer userId,String friendName){
+        System.out.println("isFriend");
+        System.out.println(userId);
+        System.out.println(friendName);
+        Integer friendID=userService.getUserByName(friendName);
+        Integer temp=friendService.isFriend(userId,friendID);
+        if(temp==null){
+            return Result.error("不是好友");
+        }
+        else{
+            return Result.success();
+        }
     }
 }

@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.yunyangu.yunyangu.entity.Group;
 import org.yunyangu.yunyangu.entity.Result;
 import org.yunyangu.yunyangu.service.GroupService;
 
@@ -16,8 +17,8 @@ public class GroupController {
     @Autowired
     private GroupService groupService;
 
-    @PostMapping("/create")
-    public Result createGroup(int userID,String groupName ){
+    @PostMapping("/createGroup")
+    public Result createGroup(Integer userID,String groupName ){
         int code=groupService.createGroup(userID,groupName);
         if(code==1){
             return Result.success();
@@ -27,8 +28,8 @@ public class GroupController {
         }
     }
 
-    @PostMapping("/join")
-    public Result joinGroup(int userID,int groupID){
+    @PostMapping("/joinGroup")
+    public Result joinGroup(Integer userID,Integer groupID){
         int code=groupService.joinGroup(userID,groupID);
         if(code==1){
             return Result.success();
@@ -40,9 +41,9 @@ public class GroupController {
 
     @GetMapping("/getUserGroup")
     public Result getUserGroup(int userID){
-        List<Integer> temp=groupService.getUserGroup(userID);
+        List<Group> temp=groupService.getUserGroup(userID);
         if(temp.isEmpty()){
-            return Result.error("用户没有群组");
+            return Result.success("用户没有群组");
         }
         else{
             return Result.success(temp);
@@ -50,7 +51,7 @@ public class GroupController {
     }
 
     @GetMapping("/getGroupInfo")
-    public Result getGroupInfo(int groupID){
+    public Result getGroupInfo(Integer groupID){
         return Result.success(groupService.getGroupInfo(groupID));
     }
 
@@ -65,4 +66,16 @@ public class GroupController {
         groupService.exitGroup(userID,groupID);
         return Result.success();
     }
+
+    @GetMapping("/getGroupByName")
+    public Result getGroupByName(String name){
+        Integer groupID=groupService.getGroupByName(name);
+        if(groupID!=null) {
+            System.out.println("groupID:"+groupID);
+            return Result.success(groupID);
+        }else {
+            return Result.error("群组不存在");
+        }
+    }
+
 }

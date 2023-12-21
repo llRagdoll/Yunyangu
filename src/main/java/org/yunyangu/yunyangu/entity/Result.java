@@ -19,7 +19,7 @@ public class Result<T> {
         return new Result<>(0, "success", null);
     }
     public static <E> Result<E> error(String message) {
-        return new Result<>(1, message, null);
+        return new Result<>(-1, message, null);
     }
 
 }

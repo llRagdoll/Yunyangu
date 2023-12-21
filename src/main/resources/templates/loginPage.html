@@ -12,10 +12,10 @@
     <div class="container">
         <div class="left">
             <div class="headericon">
-                <div class="header-item" ><img th:src="@{/img/home-box.png}" style="height: 45px;width: 45px;"></div>
+                <div class="header-item" ><img th:src="@{/img/chat-box.png}" style="height: 45px;width: 45px;"></div>
                 <div class="titletext"><img th:src="@{/img/title.png}" style="height: 60px;width: 105px;"> </div>
             </div>
-            <div class="logincard">
+            <div class="logincard" id="logincard">
                 <div>
                     <div style="display:flex;justify-content:center;align-items: center;text-align: center;">
                         <p style="font-size:28px;color:rgb(56, 56, 56);font-weight: 500;letter-spacing: 1px;padding-top:12%;margin:0">欢迎来到云言谷</p>
@@ -23,15 +23,15 @@
                     </div>            
                     <p style="font-size:14px;color:rgb(104, 104, 104);font-weight:lighter;letter-spacing: 0.5px;padding:0;margin-top:5px">聊天&nbsp分享&nbsp发现无限可能</p>
                 </div>
-                <input class="enterphone" id="name1" placeholder="请输入昵称">
-                <input class="enterpassword" id="password1" placeholder="请输入密码">
+                <input class="enterphone" id="name1" placeholder="请输入ID">
+                <input class="enterpassword" id="password1" placeholder="请输入密码" type="password">
                 <div class="hint">
                     <span style="font-size:12px;color:rgb(113, 113, 113);padding:0">登录即同意《隐私条款与协议》</span>
                     <button class="forgetpasswordbutton">忘记密码</button>
                 </div>
                 <button class="loginconfirm" onclick="tryLogin()">登录</button>
             </div>
-            <div class="registercard">
+            <div class="registercard" id="registercard">
                 <div>
                     <div style="display:flex;justify-content:center;align-items: center;text-align: center;">
                         <p style="font-size:28px;color:rgb(56, 56, 56);font-weight: 500;letter-spacing: 1px;padding-top:12%;margin:0">欢迎来到云言谷</p>
@@ -41,8 +41,10 @@
                 </div>
                 <input class="enterphone" id="name2" placeholder="请输入昵称">
                 <input class="enterphone" id="phone2" placeholder="请输入手机号">
-                <input class="enterpassword" id="password2" placeholder="请输入密码">
-                <input class="enterpassword" id="password3" placeholder="请再次输入密码">
+                <input class="enterphone" id="email2" placeholder="请输入邮箱">
+                <input class="enterphone" id="address2" placeholder="请输入地址">
+                <input class="enterpassword" id="password2" placeholder="请输入密码" type="password">
+<!--                <input class="enterpassword" id="password3" placeholder="请再次输入密码">-->
                 <div class="hint">
                     <span style="font-size:12px;color:rgb(113, 113, 113);padding:0">注册即同意《隐私条款与协议》</span>
 <!--                    <button class="forgetpasswordbutton">忘记密码</button>-->
@@ -68,6 +70,7 @@
 
 
     <script th:src="@{/js/login.js}"></script>
+
 
 </body>
 </html>

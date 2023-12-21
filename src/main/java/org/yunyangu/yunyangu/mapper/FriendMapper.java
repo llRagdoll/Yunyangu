@@ -1,6 +1,7 @@
 package org.yunyangu.yunyangu.mapper;
 
 import org.apache.ibatis.annotations.*;
+import org.yunyangu.yunyangu.entity.Friend;
 
 import java.util.List;
 
@@ -14,5 +15,9 @@ public interface FriendMapper {
     Integer addFriend(@Param("userID") int userID,@Param("friendID") int friendID);
 
     @Delete("delete from friend where user_id=#{userID} and friend_id=#{friendID}")
-    Integer deleteFriend(@Param("userID") int userID,@Param("friendID") int friendID);
+    Integer deleteFriend(@Param("userID") Integer userID,@Param("friendID") Integer friendID);
+
+
+    @Select("select friend_id from Friend where user_id=#{userID} and friend_id=#{friendID}")
+    Integer isFriend(Integer userID, Integer friendID);
 }

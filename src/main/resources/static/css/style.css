@@ -18,9 +18,10 @@ html{
     height: 40px;
 }
 
+/*左边部分*/
 .leftpart {
     display: flex;
-    align-items: center; 
+    align-items: center;
     /* background: linear-gradient(to bottom right, rgb(252, 245, 249),#e2d4f3, rgb(248, 241, 245)); */
     background: linear-gradient(to bottom right, #dffaf5,#f7e0f6);
     height:100vh;
@@ -52,20 +53,21 @@ html{
     box-shadow: 0 0 15px rgba(96, 96, 96, 0.34);
 }
 
-.contactlist{
-    display:none
-}
 
-.cardheader{
+.cardheader,.cardheader2{
     display:flex;
     align-items: baseline;
+}
+
+.cardheader2{
+    border-bottom:0.3px solid rgba(194, 194, 194, 0.62) ;
 }
 
 .cardtitle{
     font-size: 20px;
     font-weight: bold;
     color:#474747;
-    margin-top:0px;
+    margin-top:0;
     margin-left:10px;
     display: inline-block;
     vertical-align: bottom;
@@ -75,13 +77,10 @@ html{
 .messageitem,.frienditem,.groupitem{
     display: flex;
     align-items: center;
-    padding: 10px; 
+    padding: 10px;
     border-top: 0.3px solid rgba(194, 194, 194, 0.62);
 }
 
-.groupitem{
-    display:none
-}
 
 .messageavatar,.friendavatar,.groupavatar{
     margin-right:10px;
@@ -94,19 +93,6 @@ html{
 .messagetext{
     width:50%
 }
-
-
-.unread-message{
-    border-radius: 50%;
-    width:12px;
-    height:12px;
-    font-size: 10px;
-    background-color: rgb(238, 73, 73);
-    color:white;
-    align-items: center;
-    text-align: center;
-}
-
 
 .tipname,.groupname{
     font-size: 14.5px;
@@ -148,20 +134,6 @@ html{
 }
 
 
-.friendstatus{
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-.groupmemnum{
-    background-color: rgba(226, 224, 230, 0.542);
-    padding:1px 2px 1px 2px;
-    color:#8f8f8f;
-    border-radius:5px;
-    font-size:10px;
-    display: inline-block;
-}
 .header-item,.message-item,.contact-item,.setting-item{
     margin-top:30px;
     margin-left:1vw;
@@ -183,6 +155,29 @@ html{
     left:10px;
 }
 
+.addcontactlist{
+    display:none;
+}
+
+.addfriendbutton,.addgroupbutton,.creategroupbutton{
+    border:none;
+    padding:8px;
+    border-radius:5px;
+    color: white;
+}
+
+.addfriendbutton{
+    background-color: rgb(252, 202, 99);
+}
+
+.addgroupbutton{
+    background-color: rgb(168, 208, 156);
+}
+
+.creategroupbutton{
+    background-color: rgb(112, 173, 238);
+}
+
 .content {
     flex: 1;
     height:100vh;
@@ -193,7 +188,7 @@ html{
 .chatbar{
     width:94%;
     margin-left:3%;
-    height:7%; 
+    height:7%;
     box-shadow: 0 6px 6px -6px rgba(96, 96, 96, 0.34);
     align-items: center;
     display:flex;
@@ -201,114 +196,58 @@ html{
     z-index: 1;
 }
 
-.statuscircle{
-    background-color: rgb(184, 219, 165);
-    border-radius: 50%;
-    height: 10px;
-    width: 10px;
-    margin-left: 20px;
-}
 
-
-.statustext{
-    margin-left: 1px;
-    font-size: 11.5px;
-    /* color:white;
-    background-color: rgb(184, 219, 165);
-    border-radius: 10px; */
-    padding:3px 6px 3px 6px;
-    color:rgb(26, 111, 26)
-}
-
+/*聊天部分*/
 .chatcontent{
     width:94%;
     margin-top:2vh;
     margin-left:3%;
     position:relative;
     z-index: 2;
-    height:66%; 
+    height:66%;
     max-height: 66%;
 }
 
-.leftone ,.rightone{
-    display:flex;
-    flex-direction: row;
-    margin-top:20px
-}
-
-.rightone{
-    float:right;
-    margin-right:20px
-}
-
-
-.chatwordsleft,.chatwordsright{
-    max-width:200px;
-    max-height:100px;
-    box-shadow: 0 0 5px rgba(144, 144, 144, 0.34);
+.messagetitle{
+    font-weight:400;
     font-size: 14px;
-    border-radius: 15px;
-    padding:10px;
-    box-sizing: border-box;
-
-    display: inline-block;
-    vertical-align: bottom;
+    color: rgb(96, 52, 176);
+    /*box-shadow: 0 0 5px rgba(144, 144, 144, 0.34);*/
+    /*border-radius:10px;*/
+    padding:10px 10px 10px 10px;
 }
 
-.chatwordsright{
-    color:#ffffff;
-    margin-right: 15px;
-    background-color: rgb(97, 66, 211);
+.messagetitle2{
+    font-weight: 350;
+    font-size:14px;
+    color: rgb(154, 154, 154);
+    padding:10px 10px 10px 10px;
 }
 
-.chatwordsleft{
-    color:#404040;
-    margin-left: 15px;
-}
-
-.timetextleft,.timetextright{
-    font-size: 10px;
-    color: rgb(134, 134, 134);
-    display: inline-block;
-    vertical-align: bottom;
-}
-
-.timetextleft{
-    margin-left:10px;
-}
-
-.timetextright{
-    margin-right:10px;
-}
-
-
-
-.datetext{
-    font-size: 12px;
-    color:#929292;
-    text-align: center;
-    margin-top: 80px;
-    clear: right;
-  
+.messagecontent{
+    margin-top: 10px;
+    padding:10px 10px 10px 10px;
+    font-weight:400;
+    font-size: 15px;
+    color: rgb(103, 103, 103);
+    background-color: rgb(248, 248, 248);
+    border-radius:10px;
+    box-shadow: 0 0 5px rgba(144, 144, 144, 0.34);
 }
 
 .inputdiv{
     width:94%;
     margin-left:3%;
-    height:20%; 
+    height:20%;
     margin-top:2vh;
     position:relative;
     z-index: 1;
 }
 
-/* .inputdiv:hover{
-    transform: scale(1.01);
-} */
-
 .inputbar{
     color:rgb(91, 88, 88);
     width:100%;
-    height:80%; 
+    height:80%;
     border-radius: 10px;
     border: 0.5px solid rgb(164, 164, 164);
     padding:10px;
@@ -326,14 +265,11 @@ html{
     border-radius:0 0 5px 5px;
     width:100%;
     height:20%;
-    /* border-bottom: 0.5px solid rgb(172, 172, 172);
-    border-right: 0.5px solid rgb(172, 172, 172);
-    border-left: 0.5px solid rgb(172, 172, 172); */
     padding-left: 10px;
     padding-right:10px;
     box-sizing: border-box;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -348,6 +284,8 @@ html{
     align-items: center;
 }
 
+
+/*信息部分*/
 .profile {
     width: 21vw;
     background: #ffffff;
@@ -371,7 +309,6 @@ html{
 
 .profileavatar{
     clear:right;
-    margin-left:30px
 }
 
 .cardinfo{
@@ -398,8 +335,6 @@ html{
     z-index: 1;
     padding-left:10px
 }
-
-
 
 
 .infoitem{
@@ -449,11 +384,36 @@ html{
     margin-left:20px;
 }
 
-.deletebutton{
+.deletebutton,.savebutton{
     border-radius: 5px;
-    background-color: rgb(233, 94, 94);
     color:white;
     border:none;
     padding: 8px;
-    margin-top:35vh
+    position:absolute;
+    bottom:20px;
+    left: 42%;
+}
+
+.deletebutton{
+    background-color: rgb(233, 94, 94);
+}
+
+.savebutton{
+    background-color: rgb(97, 66, 211);
+}
+
+.enterphone,.enterpassword{
+    color:rgb(91, 88, 88);
+    width:70%;
+    height:24px;
+    border-radius: 10px;
+    border: 0.5px solid rgb(164, 164, 164);
+    padding:8px;
+    margin-top:20px
+}
+
+.enterphone:focus,.enterpassword:focus{
+    border:0.5px solid rgb(210, 210, 210) ;
+    box-shadow: 0 0 5px rgb(205, 205, 205);
+    outline:none
 }
